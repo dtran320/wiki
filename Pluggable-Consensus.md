@@ -34,7 +34,7 @@ The `"params"` object for `"Ethash"` may contain the following keys (YP refers t
 - `"durationLimit"` is the equilibrium block interval for the pre-Homestead era difficulty evolution, irrelevant for block numbers above `homesteadTransition`, redefines the value in (YP:42), originally 13 = `0xd`
 - `"difficultyIncrementDivisor"` is related to the equilibrium block intervals for the Homestead era difficulty evolution, redefines the value in (YP:43), originally 10 = `0xa`
 - `"homesteadTransition"` is `N_H` of (YP:13, 39) etc., or the block number after which the second line of (YP:39) is superseded by the third line, changing the difficulty evolution function
-- `"blockReward"` specifies the reward in wei given for authoring a block, or a dict where values are rewards in wei, and keys are activiting block numbers.
+- `"blockReward"` specifies the reward in wei given for authoring a block, or a key value array where values are rewards in wei, and keys are activating block numbers.
 - `"difficultyBombDelays"` specifies delays of difficulty bombs in dict, where values are delayed blocks, and keys are activiting block numbers. Note that this field is cummulative.
 
 ```json
