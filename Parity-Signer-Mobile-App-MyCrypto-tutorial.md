@@ -3,7 +3,7 @@ title: Parity Signer tutorial with MyCrypto
 ---
 
 
-This tutorial will walk through setting up an account with Parity Signer Android or iOs App and sign a transaction using [MyCrypto Dektop App](https://download.mycrypto.com/) to transfer Ether from one account to another.
+This tutorial will walk through setting up an account with Parity Signer Android or iOs App and sign a transaction using [MyCrypto Desktop App](https://download.mycrypto.com/) to transfer Ether from one account to another.
 
 ## Summary
 - [1. Get Parity Signer mobile application](#1-get-parity-signer-mobile-application)
@@ -17,13 +17,13 @@ This tutorial will walk through setting up an account with Parity Signer Android
 ## 1. Get Parity Signer mobile application
 
 ### Device security
-Parity Signer is meant to be used offline. The mobile device used to run Parity Signer will hold important information that needs to be kept securely stored. It is therefore advised to:
+Parity Signer is meant to be used offline. The mobile device used to run Parity Signer will hold valuable information that needs to be kept securely stored. It is therefore advised to:
 - Get a separate mobile device.
 - Make a factory reset.
 - Enable full-disk encryption on the device, with a reasonable password (might not be on by default, for example for older Android devices).
-- Do not use any kind of biometrics such as fingerprint or face recognition for device decryption/unlocking, as those may be less secure than regular passwords.
+- Do not use any biometrics such as fingerprint or face recognition for device decryption/unlocking, as those may be less secure than regular passwords.
 - Once Parity Signer has been installed, enable airplane mode and make sure to switch off Wifi, Bluetooth or any connection ability of the device.
-- Only charge the phone on a power outlet that is never connected to the internet. Only charge the phone with the manufacturer's charging adapter. Do not charge the phone on public USB chargers.
+- Only charge the phone using a power outlet that is never connected to the internet. Only charge the phone with the manufacturer's charging adapter. Do not charge the phone on public USB chargers.
 
 Please find [here](Parity-Signer-Mobile-App) more info about the Parity Signer application.
 
@@ -42,10 +42,10 @@ When launching the app for the first time, no account has been set up yet. At th
 Click on the `create new account` button.
 
 The next screen will allow you to select a network for your account between Ethereum mainnet, Kovan and Ropsten are supported.
-You can chose your account identicon and view the related address.
+You can choose your account identicon and view the related address.
 Finally, you can define a name for this account.
 
-In the next step, your recovery phrase will be presented to you. Think of it a a master key. If you lose it, you lose your money.
+In the next step, your recovery phrase will be presented to you. Think of it as a master key. If you lose it, you lose your money.
 **Write this recovery phrase down and store it in a safe place**.
 If your phone gets stolen/broken/forgotten this will be the only way to [recover your account](#recover-an-account-with-your-recovery-phrase).
 
@@ -61,16 +61,16 @@ If you already have an account created with either Parity Signer or Parity UI, y
 - Select the network you want to recover this account for.
 - Name this account.
 - Type in the recovery phrase, word suggestion helps you prevent any typo.
-- Tap `Next step`
-- Select a PIN number and confirm it by typing it again
-- Your recovered account will appear in the account list
+- Tap `Next step`.
+- Select a PIN number and confirm it by typing it again.
+- Your recovered account will appear in the account list.
 
 ## 3. Copy Parity Signer account's address
 
-To be able to follow this tutorial and send Ether from a freshly created account on Parity Signer mobile app, you will need to get some Ether on this account first. A convenient way to copy the address of a new Parity Signer account in order to receive Ether on it is to use the `View & Send` option of MyCrypto Desktop App. Download, install and launch [MyCrypto Dektop App](https://download.mycrypto.com/).
+To be able to follow this tutorial and send Ether from a freshly created account on Parity Signer mobile app, you will need to get some Ether on this account first. A convenient way to copy the address of a new Parity Signer account is to use the `View & Send` option of MyCrypto Desktop App. Download, install and launch [MyCrypto Desktop App](https://download.mycrypto.com/).
 
-- On MyCrypto App, click on Parity Signer
-- On Parity Signer account list, select the account you want to copy the address of and tap `Show account QR code`
+- On MyCrypto App, click on Parity Signer.
+- On Parity Signer account list, select the account you want to copy the address of and tap `Show account QR code`.
 - Scan the QR code displayed on your phone with your computer's webcam. Make sure the QR code is fully displayed on your mobile's screen.
 - You can now copy the address of your account in MyCrypto and send Ether to it from another account using your favourite Wallet application.
 
@@ -78,21 +78,21 @@ To be able to follow this tutorial and send Ether from a freshly created account
 
 ### 4. Sign a transaction using MyCrypto Desktop App
 
-Assuming that your Parity Signer account now has funds, you will be able to send securely some Ether to anyone, without transferring your private key, and without needing any internet connection on your mobile phone.
+Assuming that your Parity Signer account now has funds, you will be able to send some Ether securely to anyone, without transferring your private key, and without needing any internet connection on your mobile phone.
 
 - To do so, click on `Parity Signer` from MyCrpto Desktop app.
 ![Mycrypto parity mobile signer app](images/MyCrypto-Parity-Signer-1.jpg)
 
-- On your phone, select in the account list the account you want to send funds from of and tap `Show account QR code`
+- On your phone, select in the account list the account you want to send funds from of and tap `Show account QR code`.
 - Scan the QR code displayed on your phone with your computer's webcam. Make sure the QR code is fully displayed on your mobile's screen.
 - MyCrypto will now allow you to enter the address of the account you want to send Ether to as well as the amount of gas. Make sure to try with a small amount of Ether first before sending larger amounts.
 - Click on `Send transaction` when you're done.
 
 ![Mycrypto parity mobile signer app](images/MyCrypto-Parity-Signer-2.jpg)
 
-You will now be presented with a QR code that represents the transaction. Since this transaction is sending funds from your Parity Signer Mobile App account, only this account (sitting on your phone) is able to sign and authorize this transaction. This is what we'll do in the next steps:
+You will now be presented with a QR code that represents the transaction. Since this transaction is sending funds from your Parity Signer mobile app account, only this account (sitting on your phone) can sign and authorise this transaction. This is what we'll do in the next steps:
 - From the Parity Signer mobile app, switch to the `Scanner` tab and scan the QR code presented by MyCrypto Desktop app.
-- Review the transaction addresses and the amount to send on your phone. The amount and addresses must match what you've entered in MyCrypto. If you got phished, this is where you can realize it and reject the transaction.
+- Review the transaction addresses and the amount to send on your phone. The amount and addresses must match what you've entered in MyCrypto. If you got phished, this is where you can realise it and reject the transaction.
 - Once you're sure, scroll down and click `Sign Transaction` to enter your pin.
 
 ![create account](images/Parity-Signer-android-1.png)
