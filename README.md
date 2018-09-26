@@ -8,8 +8,8 @@ Parity Technologies is an infrastructure and innovation focused company building
 Our work combines cutting-edge cryptography, cellular system, peer-to-peer technology and decentralised consensus architectures. 
 
 This wiki covers the following products:
-- [Parity Ethereum](Parity-Ethereum)
-- [Parity Substrate](Parity-Substrate)
-- [Parity Fether](Parity-Fether)
-- [Parity Signer](Parity-Signer-Mobile-App)
-- [Parity UI](Parity-Wallet)
+- [Parity Ethereum](https://github.com/paritytech/parity-ethereum)
+- [Parity Substrate](https://github.com/paritytech/substrate)
+- [Parity Fether](https://github.com/paritytech/fether)
+- [Parity Signer](https://github.com/paritytech/parity-signer)
+- [Parity UI](https://github.com/parity-js/shell)
