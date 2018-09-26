@@ -2,7 +2,7 @@
 
 This Wiki is open source, anybody can contribute! If you spot an error, a typo, or feel like creating or amending some content, feel free to do so. Here is a quick how-to:
 
-1. Visit [https://github.com/paritytech/wiki](https://github.com/paritytech/wiki) repository and click on `Fork` in the top right-hand corner.  
+1. Click on `Fork` in the top right-hand corner.  
 ![Fork on github](/images/wiki-contribute-0.jpg)
 1. The Wiki will be cloned in your own repo, you will be redirected to https://github.com/your_handle/wiki
 1. From here you can edit a page directly by clicking on a file and edit it (click on the pen on the top right-hand corner)
