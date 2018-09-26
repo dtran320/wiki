@@ -2,12 +2,12 @@
 title: Part 1 - Configuring each node
 ---
 
-In this first part, we will create all the files needed to bootstrap a local PoA based network. This includes creating the chain specification file (also called genesis) as well as the node configuration files for the authorities `Node0` and `Node1` and `Alice`.
+In this first part, we will create all the files needed to bootstrap a local PoA based network. This includes creating the chain specification file (also called genesis) as well as the node's configuration files for `Node0`, `Node1` and `Alice`.
 
 The workflow of this tutorial will be as follow:
 - Using a fixed list of authorities, `Node0` will be the only authority allowed to seal blocks at the genesis of the blockchain.
-- `Alice` will deploy a validator-set contract. The contract will also only allow `Node0` to seal blocks.
-- `Node0` will plan a fork to switch from a fixed list of validator to the validator-set deployed previously.
+- `Alice` will deploy a validator-set contract using [Remix](https://remix.ethereum.org). The contract will also only allow `Node0` to seal blocks.
+- `Node0` will plan a fork to switch from a fixed list of validator to the validator-set contract deployed previously by `Alice`.
 - `Alice`, as the owner of the validator set contract will add `Node1` as a validator additionnly to `Node0`.
 
 ## 1. Create the genesis file
@@ -122,7 +122,7 @@ Repeat password:  # type again
 ```
 It will give you the address of the account we will use for `Node0`. 
 
-We will need to create a password file also for the account to be autonomously usable by the node.
+We will need to create a password file also for the node to be able to sign message and seal blocks using this account.
 
 Run the following command to create a file named `node0.pwd` containing the password `node0pwd`:
 
@@ -217,7 +217,9 @@ Repeat password:  # type again
 ```
 It will give you the address of the account we will use for `Node1`. 
 
-We will need to create a password file also for the account to be autonomously usable by the node.
+Although `Node1` will not initially be part of the validator's list, we can still create a password file and configure the node as if it was a validator. It will seal blocks and propagate them but these will be ignored by the other nodes as long as the account signing them is not part of the authorized validator.
+
+**^ @André is this correct ?**
 
 Run the following command to create a file named `node1.pwd` containing the password `node1pwd`:
 
@@ -237,7 +239,7 @@ reseal_on_txs = "none"
 force_sealing = true
 ```
 
-To make sure the file is valid, launch `Node1` using the command `parity --config ./node1.toml` and verify that you do not get any error in the console. As `Node1` and `Node0` might not be connected to each other yet, it is normal to not import any block from `Node1`.
+To make sure the file is valid, launch `Node1` using the command `parity --config ./node1.toml` and verify that you do not get any error in the console. As `Node1` and `Node0` might not be connected to each other yet, it is normal that `Node1` does not import any block from `Node0`.
 
 Also copy in a text file the Pubic node address as we will use is later on.
 ```bash
@@ -320,7 +322,7 @@ bootnodes = [
 ]
 ```
 
-To make sure that each node sees the others, launch the nodes at the same time in different terminal windows and verify that they are each connected to 2 peers. and importing the blocks created by `Node0`.
+To make sure that each node sees the others, launch the nodes at the simulateneously in different terminal windows and verify that they are each connected to 2 peers and importing the blocks created by `Node0`.
 
 
 Find [here](https://github.com/Tbaut/) example files that you can compare yours with.
